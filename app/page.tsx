@@ -1,5 +1,5 @@
 import { getSiteData } from "@/lib/db";
-
+import HeroSlider from "./HeroSlider";
 export const dynamic = "force-dynamic";
 
 function Arrow() {
@@ -25,22 +25,8 @@ export default async function Home() {
         <a className="header-cta" href="#contact">Обсудить проект <Arrow /></a>
       </header>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">{content.hero.eyebrow}</p>
-          <h1>{content.hero.titleLine1}<br />{content.hero.titleLine2}</h1>
-          <div className="hero-bottom">
-            <p>{content.hero.description}</p>
-            <a className="round-link" href="#work" aria-label="Смотреть работы">↓</a>
-          </div>
-        </div>
-        <div className="hero-mosaic" aria-label="Мозаика избранных фотографий">
-          <figure className="mosaic-tile mosaic-main"><img src="/photos/web/music-4632.webp" alt="Промопортрет музыкальной группы" /><figcaption><span>Music / promo</span><b>01</b></figcaption></figure>
-          <figure className="mosaic-tile mosaic-top"><img src="/photos/web/brand-0911.webp" alt="Зимняя имиджевая съёмка" /><figcaption><span>Brand / image</span><b>02</b></figcaption></figure>
-          <figure className="mosaic-tile mosaic-portrait"><img src="/photos/web/portrait-3bw.webp" alt="Чёрно-белый эмоциональный портрет" /><figcaption><span>Human / portrait</span><b>03</b></figcaption></figure>
-          <figure className="mosaic-tile mosaic-product"><img src="/photos/web/product-bottle.webp" alt="Предметная съёмка спортивной бутылки" /><figcaption><span>Product / still</span><b>04</b></figcaption></figure>
-          <div className="mosaic-video" aria-label="Место для будущего видео"><img src="/photos/web/brand-0881.webp" alt="" aria-hidden="true" /><span className="play" aria-hidden="true">▶</span><p>Motion / showreel</p><small>VIDEO SOON</small></div>
-        </div>
+<section className="hero" id="top">
+  <HeroSlider />
       </section>
 
       <section className="manifesto" aria-label="Подход к работе">
